@@ -66,8 +66,22 @@ async function sendMessage() {
     showTyping();
 
     // Build context prompt string
-    let contextPrompt = "You are an AI assistant. Always respond in **bullet points** or numbered points if appropriate, with short and clear sentences.\n\n";
+    let contextPrompt =
+    `You are a helpful assistant like ChatGPT.
+     Your responses must follow these rules:
+    - Write in short, clear sentences
+    - Use bullet points or numbered points
+    - Add line breaks for readability
+    - Highlight important words using **bold**
+    - Break down ideas into simple steps
+    - Avoid long paragraphs
+    - Keep tone friendly and conversational
 
+     Answer in this structure:
+     1. A one-line summary
+     2. A clean bullet list of points
+
+`;
     conversation.forEach(msg => {
         contextPrompt += `${msg.role}: ${msg.content}\n`;
     });
