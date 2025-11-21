@@ -1,0 +1,98 @@
+:root {
+    --bg: #f5f5f5;
+    --text: #222;
+    --chat-bg: white;
+    --bubble-user: #0078ff;
+    --bubble-ai: #eaeaea;
+}
+
+body.dark {
+    --bg: #1e1e1e;
+    --text: #eaeaea;
+    --chat-bg: #2a2a2a;
+    --bubble-user: #005fcc;
+    --bubble-ai: #3a3a3a;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+h2 {
+    text-align: center;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: var(--bubble-user);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.chatbox {
+    width: 100%;
+    max-width: 550px;
+    height: 400px;
+    background: var(--chat-bg);
+    border: 1px solid #4442;
+    padding: 15px;
+    margin: 20px auto;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.user-message {
+    background: var(--bubble-user);
+    color: white;
+    margin-left: auto;
+}
+
+.ai-message {
+    background: var(--bubble-ai);
+    color: var(--text);
+    margin-right: auto;
+}
+
+.typing {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.input-area {
+    text-align: center;
+}
+
+input {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #7777;
+    border-radius: 5px;
+    background: var(--chat-bg);
+    color: var(--text);
+}
+
+button {
+    padding: 10px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: var(--bubble-user);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
